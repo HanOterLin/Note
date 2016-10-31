@@ -1,4 +1,6 @@
 # Note
 Note
 
+```
 1.window.location = 'http://localhost:8888/OTER'; //Change the url of current window.
+```
