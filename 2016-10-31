@@ -1,5 +1,11 @@
-Change the url of current window.
-window.location = 'http://localhost:8888/OTER';
+// Set the location property to navigate to a new web page
+window.location = "http://www.oreilly.com/";
+
+In client-side JavaScript, the Window object is also the global object.
+
+// If the element is empty, then insert the current date and time into it
+if (timestamp.firstChild == null)
+timestamp.appendChild(document.createTextNode(new Date().toString()));
 
 Web文档应当少量地使用JavaScript，因为JavaScript真正的角色是增强用户的浏览体验，使信息获取速度和传递更容易。但JavaScript可以增强体验。
 
