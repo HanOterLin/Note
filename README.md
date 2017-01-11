@@ -1,12 +1,16 @@
 
-# JavaScript Cookie
+# Steps
 
-A simple, lightweight JavaScript API for handling cookies
+Steps to initialize the `PostgreSQL` database：
 
-- Create database `CERBERUS` in postgresql.
-- Create database `FAAST` in postgresql.
-- Pull [CERBERUS-DEMO](git@github.pwc.com:wong-huang/CERBERUS-DEMO.git) from GitHub.
-- Draw `CERBERUS-DEMO/scripts/CERBERUS.sql`
+- Create database `CERBERUS` in PostgreSQL.
+- Create database `FAAST` in PostgreSQL.
+- Download [CERBERUS-DEMO](git@github.pwc.com:wong-huang/CERBERUS-DEMO.git) from GitHub: `git@github.pwc.com:wong-huang/CERBERUS-DEMO.git`.
+- Execute the sql script file `CERBERUS-DEMO/scripts/CERBERUS.sql` in SQLconsole of `CERBERUS` database.
+- Execute the sql script file `CERBERUS-DEMO/scripts/FAAST.sql` in SQLconsole of `FAAST` database.
+- run importvendor...
+- run importDB
+
 
 `ddsd`
 
