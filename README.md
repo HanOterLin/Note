@@ -20,10 +20,12 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 ### 元素显示角色
 
-	**块级元素**：生成一个元素框，默认填充父级元素的内容区。例如：`<div></div>`和`<p></p>`
-	**行内元素**：在一个文本行内生成元素框，不会打断这行文本。例如：<a></a>
+**块级元素**：生成一个元素框，默认填充父级元素的内容区。例如：`<div>`和`<p>`
 
-	CSS属性 display ： inline 和 block
+**行内元素**：在一个文本行内生成元素框，不会打断这行文本。例如：`<a>`
+
+可由CSS属性 `display` 控制 ： inline 和 block
+
 
 	```html
 	<book>
