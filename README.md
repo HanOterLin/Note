@@ -1,4 +1,4 @@
-## March 14, 2017
+# March 14, 2017
 
 ```javascript
 // Set the location property to navigate to a new web page
@@ -9,9 +9,9 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 小问题能用原生JavaScript解决的勿用框架，操作更灵活。
 
-## March 15, 2017
+# March 15, 2017
 
-### 替换和非替换元素
+## 替换和非替换元素
 
 **替换元素**：用来替换元素内容的部分不是由文档内容直接显示。例如：`<img>`。
 
@@ -21,7 +21,7 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 <span>hi there</span>`
 ```
 
-### 元素显示角色
+## 元素显示角色
 
 **块级元素**：生成一个元素框，默认填充父级元素的内容区。例如：<div></div>和<p></p>
 
