@@ -1,5 +1,3 @@
-# NOTE
-
 ## March 14, 2017
 
 ```javascript
@@ -15,20 +13,21 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 ### 替换和非替换元素
 
-替换元素：用来替换元素内容的部分不是由文档内容直接显示。例如：`<img>`。
+`替换元素`：用来替换元素内容的部分不是由文档内容直接显示。例如：`<img>`。
 
-非替换元素：其内容由用户代理（浏览器）在元素本身生成的框中显示。包括大部分HTML和XHTML，例如：<span>hi there</span>
+`非替换元素`：其内容由用户代理（浏览器）在元素本身生成的框中显示。包括大部分HTML和XHTML，
+例如：`<span>hi there</span>`
 
 
-2. 元素显示角色
+### 元素显示角色
 
-块级元素：生成一个元素框，默认填充父级元素的内容区。例如：<div></div>和<p></p>
+`块级元素`：生成一个元素框，默认填充父级元素的内容区。例如：<div></div>和<p></p>
 
-行内元素：在一个文本行内生成元素框，不会打断这行文本。例如：<a></a>
+`行内元素`：在一个文本行内生成元素框，不会打断这行文本。例如：<a></a>
 
 CSS属性 display ： inline 和 block
 
-例子：
+```html
 <book>
 	<maintitle>Cascading Style Sheets: The Definitive Guide</maintitle>
 	<subtitle>Second Edition</subtitle>
@@ -48,6 +47,7 @@ CSS属性 display ： inline 和 block
 book, maititle, subtitle, author, isbn {display: block;}
 publisher, pubdate {display: inline;}
 </style>
+```
 
 
 3. 属性选择器
