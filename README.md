@@ -50,31 +50,32 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 - 属性选择器
 
-+ `p.warning.help` 匹配class属性包含warning和help的所有p元素
+  + `p.warning.help` 匹配class属性包含warning和help的所有p元素
 
-+ `a[href][title]` 选择同时有href和title属性的所有a元素
+  + `a[href][title]` 选择同时有href和title属性的所有a元素
 
-+ `[foo="bar"]`	选择foo属性值等于"bar"的所有元素
+  + `[foo="bar"]`	选择foo属性值等于"bar"的所有元素
 
-+ `[foo~="bar"]`	选择foo属性值中有"bar"属性的所有元素
+  + `[foo~="bar"]`	选择foo属性值中有"bar"属性的所有元素
 
-+ `[foo^="bar"]`	选择foo属性值以"bar"开头的所有元素
+  + `[foo^="bar"]`	选择foo属性值以"bar"开头的所有元素
 
-+ `[foo$="bar"]`	选择foo属性值以"bar"结尾的所有元素
+  + `[foo$="bar"]`	选择foo属性值以"bar"结尾的所有元素
 
-+ `[foo*="bar"]`	选择foo属性值包含"bar"子串的所有元素
+  + `[foo*="bar"]`	选择foo属性值包含"bar"子串的所有元素
 
-+ `[foo|="bar"]`	选择foo属性等于`bar`或以`bar-`开头的所有元素
-可用于匹配图片，例如：
+  + `[foo|="bar"]`	选择foo属性等于`bar`或以`bar-`开头的所有元素
+  	可用于匹配图片，例如：
+	```css
+	img[src|="figure"] {border: 1px solid gray;}
+	```
+	常用语匹配 语言值
+
+
+- 选择相邻兄弟元素
 ```css
-img[src|="figure"] {border: 1px solid gray;}
-```
-常用语匹配 语言值
-
-
-4. 选择相邻兄弟元素
-
 h1 + p + div {margin-top: 0;}
+```
 选择 h1 的兄弟元素中的下一个 p 元素的下一个 div 元素
 
 
@@ -298,52 +299,6 @@ Cookies.set('name', 'value', { secure: true });
 Cookies.get('name'); // => 'value'
 Cookies.remove('name', { secure: true });
 ```
-
-## Converters
-
-### Read
-
-Create a new instance of the api that overrides the default decoding implementation.  
-All get methods that rely in a proper decoding to work, such as `Cookies.get()` and `Cookies.get('name')`, will run the converter first for each cookie.  
-The returning String will be used as the cookie value.
-
-Example from reading one of the cookies that can only be decoded using the `escape` function:
-
-```javascript
-document.cookie = 'escaped=%u5317';
-document.cookie = 'default=%E5%8C%97';
-var cookies = Cookies.withConverter(function (value, name) {
-    if ( name === 'escaped' ) {
-        return unescape(value);
-    }
-});
-cookies.get('escaped'); // 北
-cookies.get('default'); // 北
-cookies.get(); // { escaped: '北', default: '北' }
-```
-
-### Write
-
-Create a new instance of the api that overrides the default encoding implementation:
-
-```javascript
-Cookies.withConverter({
-    read: function (value, name) {
-        // Read converter
-    },
-    write: function (value, name) {
-        // Write converter
-    }
-});
-```
-
-## Server-side integration
-
-Check out the [Servers Docs](SERVER_SIDE.md)
-
-## Contributing
-
-Check out the [Contributing Guidelines](CONTRIBUTING.md)
 
 ## Manual release steps
 
