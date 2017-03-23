@@ -11,14 +11,14 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 ## March 15, 2017
 
-- 替换和非替换元素
+### 替换和非替换元素
 
 	**替换元素**：用来替换元素内容的部分不是由文档内容直接显示。例如：`<img>`。
 
 	**非替换元素**：其内容由用户代理（浏览器）在元素本身生成的框中显示。包括大部分`HTML`和`XHTML`，
 	例如：`<span>hi there</span>`
 
-- 元素显示角色
+### 元素显示角色
 
 	**块级元素**：生成一个元素框，默认填充父级元素的内容区。例如：`<div></div>`和`<p></p>`
 	**行内元素**：在一个文本行内生成元素框，不会打断这行文本。例如：<a></a>
@@ -48,7 +48,7 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 	```
 
 
-- 属性选择器
+### 属性选择器
 
   + `p.warning.help` 匹配class属性包含warning和help的所有p元素
 
@@ -72,7 +72,7 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 	常用语匹配 语言值
 
 
-- 选择相邻兄弟元素
+### 选择相邻兄弟元素
 ```css
 h1 + p + div {margin-top: 0;}
 ```
