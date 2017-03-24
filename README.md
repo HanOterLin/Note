@@ -389,3 +389,22 @@ const sidebar = $('.sidebar');
 const $sidebar = $('.sidebar');
 ```
 
+### 使用 $ 作为存储 jQuery 对象的变量名前缀
+
+```javascript
+// good
+const $sidebar = $('.sidebar');
+```
+
+### 对有作用域的 jQuery 对象查询使用 `find`
+
+```javascript
+// good
+$('.sidebar ul').hide();
+
+// good
+$('.sidebar > ul').hide();
+
+// good
+$sidebar.find('ul').hide();
+```
