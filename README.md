@@ -294,11 +294,16 @@ const val = inputValue >> 0;
 
 ### 不使用loop循环，创建一个长度为100的数组，并且每个元素的值等于它的下标
 ```javascript
-Array.from(Array(100).keys())
-[...Array(100).keys()]
-Object.keys(Array(100).join().split(','))
-Object.keys(Array(100).fill(undefined))
-Object.keys(Array.apply(null,{length:100}))
+Array.from(Array(100).keys());
+
+[...Array(100).keys()];
+
+Object.keys(Array(100).join().split(','));
+
+Object.keys(Array(100).fill(undefined));
+
+Object.keys(Array.apply(null,{length:100}));
+
 Array.prototype.recursion = function(length) {
     if (this.length === length) {
         return this;
@@ -306,8 +311,9 @@ Array.prototype.recursion = function(length) {
     this.push(this.length);
     this.recursion(length);
 }
-arr = []
-arr.recursion(100)
+arr = [];
+arr.recursion(100);
+
 Array(100).fill(0).map(function (val, index) {
     return index;
 })
