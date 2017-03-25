@@ -417,3 +417,54 @@ $sidebar.find('ul').hide();
 
 ## March 25, 2017
 
+### `! important`
+
+`! important` 重要声明组 高于 非重要声明组
+
+声明冲突时，会将声明非为 `! important` 组，和 `其它`组，并进行组内对比。
+
+```html
+<head>
+<style type="text/css">
+  #rr {
+      background-color: red ! important;
+    }
+</style>
+</head>
+<body oo="ll">
+<h1 id="rr" style="background-color: blue" >结果为 red ,! important 凌驾所有非重要声明组选择器之上</h1>
+```
+
+### 伪类样式顺序 **link-visited-hover-active** **(LVHA)**
+
+```css
+a:link {color: black;}
+a:visited {color: purple;}
+a:hover {color: red;}
+a:active {color: orange;}
+```
+
+### 串连伪类
+
+通过将伪类链接在一起，可以缓解特殊性和顺序问题
+
+```css
+:link:hover:active {color: orange;}
+:visited:hover:active {color: silver;}
+```
+
+### `em` 和 `ex`
+
+`em` 为该元素的`font-size` 的像素长度，不同`font-size`的元素的`em`不同。
+
+`ex` 为该元素字体小写字母`x`的高度，不同字体`ex`不同。
+
+### `inherit`
+
+继承元素的样式属性
+
+```css
+h1:first-child {
+  font-size: inherit;
+}
+```
