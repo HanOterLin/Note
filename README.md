@@ -414,3 +414,6 @@ $('.sidebar > ul').hide();
 // good
 $sidebar.find('ul').hide();
 ```
+
+## March 25, 2017
+

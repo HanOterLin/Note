@@ -1,0 +1,23 @@
+1. data-* 的读取和添加
+
+<h1 id="first" data-hehe="Davi" alt="aa kk" >1</h1>
+
+<script type="text/javascript">
+	var head = document.getElementsByTagName('first');
+	head.dataset	//{hehe : 'Davi'}
+	head.dataset.haha = 'huhu'	//add data-* : data-haha="huhu"
+</script>
+
+
+2. 静态伪类
+
+a:link {color: purple}
+
+a:visited {color: silver}
+
+
+3. 动态伪类
+
+:focus	when mouse point focus on tag.
+:hover	when mouse point over tag.
+:active	when mouse click tag.
