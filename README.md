@@ -75,6 +75,212 @@ h1 + p + div {margin-top: 0;}
 ```
 选择 h1 的兄弟元素中的下一个 p 元素的下一个 div 元素
 
+## March 17, 2017
+
+### `data-*` 的读取和添加
+
+```html
+<h1 id="first" data-hehe="Davi" alt="aa kk" >1</h1>
+
+<script type="text/javascript">
+	var head = document.getElementsByTagName('first');
+	head.dataset	//{hehe : 'Davi'}
+	head.dataset.haha = 'huhu'	//add data-* : data-haha="huhu"
+</script>
+```
+
+### 静态伪类
+
+```css
+a:link {color: purple}
+
+a:visited {color: silver}
+```
+
+
+### 动态伪类
+
+```css
+a:focus		/* when mouse point focus on tag. */
+a:hover		/* when mouse point over tag. */
+a:active	/* when mouse click tag. */
+```
+
+## March 20, 2017
+
+### 1. The first child of the parent element
+
+```css
+h1:first-child { background-color: yellow; }
+```
+
+### 2. According to language selection
+
+```html
+<p lang="fr">111111</p>
+<p lang="en">111111</p>
+<p lang="ge">111111</p>
+```
+```css
+h1:lang(ge){ background-color: yellow; }
+h1:lang(en){ background-color: red; }
+h1:lang(fr){ background-color: blue; }
+```
+
+### 3. 伪元素选择器
+
+设置 **块** 级元素首字母样式
+
+```css
+p:first-letter { color: red; };
+```
+
+设置 **块** 级元素中的第一个文本行
+
+```css
+p:first-line { color: purple; };
+```
+
+伪元素必须放在该伪元素选择器的最后面，`p:first-line em` 不合法！
+
+设置 **之前** 和 **之后** 样式
+
+```css
+h1:before { content: "台词："; color: yellow; }
+h1:after { content: "END"; color: yellow; }
+```
+
+### 4. 不管怎样，无论问题看上去多抽象，多难懂，都要继续努力！你的努力不会白费。
+
+### 5. 选择器特殊性（优先级）
+
+`id:` 			0, 1, 0, 0.
+
+`class`属性，**属性选择**或**伪类**：	0, 0, 1, 0.
+
+**元素**和**伪元素**：				0, 0, 0, 1.
+
+**结合符** 和 **通配符** 无贡献。
+
+
+## March 22, 2017
+
+### 1. 引用
+
+`const`	不可变
+
+`let` 	可变
+
+
+### 2. 对象
+
+```javascript
+// bad
+const item = new Object();
+
+// good
+const item = {};
+```
+
+
+### 3. 创建有动态属性名的对象时，使用可被计算的属性名称
+
+```javascript
+function getKey(k) {
+  return `a key named ${k}`;
+}
+
+// bad
+const obj = {
+  id: 5,
+  name: 'San Francisco',
+};
+obj[getKey('enabled')] = true;
+
+// good
+const obj = {
+  id: 5,
+  name: 'San Francisco',
+  [getKey('enabled')]: true,
+};
+```
+
+### 4. 使用拓展运算符 ... 复制数组
+
+```javascript
+// bad
+const len = items.length;
+const itemsCopy = [];
+let i;
+
+for (i = 0; i < len; i++) {
+  itemsCopy[i] = items[i];
+}
+
+// good
+const itemsCopy = [...items];
+```
+
+### 5. 使用解构存取和使用多属性对象
+
+```javascript
+// bad
+function getFullName(user) {
+  const firstName = user.firstName;
+  const lastName = user.lastName;
+
+  return `${firstName} ${lastName}`;
+}
+
+// good
+function getFullName(obj) {
+  const { firstName, lastName } = obj;
+  return `${firstName} ${lastName}`;
+}
+
+// best
+function getFullName({ firstName, lastName }) {
+  return `${firstName} ${lastName}`;
+}
+```
+
+### 6. 对数组使用解构赋值
+
+```javascript
+const arr = [1, 2, 3, 4];
+
+// bad
+const first = arr[0];
+const second = arr[1];
+
+// good
+const [first, second] = arr;
+```
+
+
+### 7. 字符串超过 80 个字节应该使用字符串连接号换行
+
+推荐使用 `+` 连接，性能优于 `\`.
+
+
+### 8. 程序化生成字符串时，使用模板字符串代替字符串连接
+
+```javascript
+// bad
+function sayHi(name) {
+  return 'How are you, ' + name + '?';
+}
+
+// bad
+function sayHi(name) {
+  return ['How are you, ', name, '?'].join();
+}
+
+// good
+function sayHi(name) {
+  return `How are you, ${name}?`;
+}
+```
 
 ## March 24, 2017
 
