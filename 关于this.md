@@ -1,19 +1,19 @@
-## 1. 直接调用`function()`和`new function()`之间的`this`的差别 
+## 1. 直接调用`function()`与`new function()`
 
 ```javascript
-function func1() {
+function f1() {
     this.name = 'Tom';
     const that = this;
-    func2(that);
+    f2(that);
 }
 
-function func2(that) {
+function f2(that) {
     this.name = 'Jerry';
     console.log(that.name); //Jerry
     console.log(this.name); //Jerry
 }
 
-func1();
+f1();
 ```
 
 ```javascript
