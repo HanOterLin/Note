@@ -132,13 +132,13 @@ h1:lang(fr){ background-color: blue; }
 设置 **块** 级元素首字母样式
 
 ```css
-p:first-letter { color: red; };
+p:first-letter { color: red; }
 ```
 
 设置 **块** 级元素中的第一个文本行
 
 ```css
-p:first-line { color: purple; };
+p:first-line { color: purple; }
 ```
 
 伪元素必须放在该伪元素选择器的最后面，`p:first-line em` 不合法！
