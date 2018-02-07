@@ -1,6 +1,4 @@
-# **this**
-
-### 1. 直接调用`function()`和`new function()`之间的`this`的差别 
+## 1. 直接调用`function()`和`new function()`之间的`this`的差别 
 
 ```javascript
 function func1() {
