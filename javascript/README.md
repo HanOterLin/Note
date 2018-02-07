@@ -1,37 +1,44 @@
-## 1. 直接调用`function()`与`new function()`
+## Table of Contents
 
-```javascript
-function f1() {
-    this.name = 'Tom';
-    const that = this;
-    f2(that);
-}
+  1. [this](#this)
 
-function f2(that) {
-    this.name = 'Jerry';
-    console.log(that.name); //Jerry
-    console.log(this.name); //Jerry
-}
+## this
 
-f1();
-```
+  <a name="types--primitives"></a><a name="1.1"></a>
+  - [1.1](#types--primitives) `function()`与`new function()`
 
-```javascript
-
-function func1() {
-    this.name = 'Tom';
-    const that = this;
-    func2(that);
-}
-
-function func2(that) {
-    this.name = 'Jerry';
-    console.log(that.name); //Tom
-    console.log(this.name); //Jerry
-}
-
-new func1();
-```
+    ```javascript
+    function f1() {
+        this.name = 'Tom';
+        const that = this;
+        f2(that);
+    }
+    
+    function f2(that) {
+        this.name = 'Jerry';
+        console.log(that.name); //Jerry
+        console.log(this.name); //Jerry
+    }
+    
+    f1();
+    ```
+    
+    ```javascript
+    
+    function func1() {
+        this.name = 'Tom';
+        const that = this;
+        func2(that);
+    }
+    
+    function func2(that) {
+        this.name = 'Jerry';
+        console.log(that.name); //Tom
+        console.log(this.name); //Jerry
+    }
+    
+    new func1();
+    ```
 // 为什么console.log(that.boy);
 // 输出的不是abc？
 
