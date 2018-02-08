@@ -1,6 +1,4 @@
-# Han's Notes
-
-*A mostly reasonable approach to save knowledge*
+# Table of Contents
 
   - [Markdown](markdown/)
   - [Javascript](javascript/)
