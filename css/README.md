@@ -1,4 +1,4 @@
-> **Note**: March 14, 2017
+> **Date**: March 14, 2017
 
 ```javascript
 // Set the location property to navigate to a new web page
@@ -9,7 +9,7 @@ In **client-side JavaScript**, the **Window** object is also the **global** obje
 
 小问题能用原生JavaScript解决的勿用框架，操作更灵活。
 
-> **Note**: March 15, 2017
+> **Date**: March 15, 2017
 
 #### 替换和非替换元素
 
@@ -75,7 +75,7 @@ h1 + p + div {margin-top: 0;}
 ```
 选择 h1 的兄弟元素中的下一个 p 元素的下一个 div 元素
 
-> **Note**: March 17, 2017
+> **Date**: March 17, 2017
 
 #### `data-*` 的读取和添加
 
@@ -106,7 +106,7 @@ a:hover		/* when mouse point over tag. */
 a:active	/* when mouse click tag. */
 ```
 
-> **Note**: March 20, 2017
+> **Date**: March 20, 2017
 
 #### 1. The first child of the parent element
 
@@ -163,7 +163,7 @@ h1:after { content: "END"; color: yellow; }
 **结合符** 和 **通配符** 无贡献。
 
 
-> **Note**: March 22, 2017
+> **Date**: March 22, 2017
 
 #### 1. 引用
 
@@ -282,7 +282,7 @@ function sayHi(name) {
 }
 ```
 
-> **Note**: March 24, 2017
+> **Date**: March 24, 2017
 
 #### `class`
 
@@ -621,7 +621,7 @@ $('.sidebar > ul').hide();
 $sidebar.find('ul').hide();
 ```
 
-> **Note**: March 25, 2017
+> **Date**: March 25, 2017
 
 #### `! important`
 
